@@ -1,11 +1,11 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
+import AuthPanel from "@/components/AuthPanel";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h2>Log In</h2>
-      <a href="/api/auth/login">Login</a>
+      <h1>Home</h1>
     </main>
   );
 }
