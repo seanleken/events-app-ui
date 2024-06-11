@@ -2,6 +2,7 @@
 
 import { UserProfile, useUser } from "@auth0/nextjs-auth0/client";
 import styles from './Header.module.scss';
+import { Button } from "@radix-ui/themes";
 
 export default function() {
     const { user}  = useUser();
@@ -20,8 +21,14 @@ function UserManagement({user}: {user?: UserProfile}) {
             ?
             <div className={styles.header__authPanel}>
                 <p>Hi {user.name}</p>
-                <a href="/api/auth/logout">Logout</a>
+                <a href="/api/auth/logout">
+                    <Button>
+                        Logout
+                    </Button>
+                </a>
             </div>
-            : <a href="/api/auth/login">Log In</a>    
+            : <a href="/api/auth/login">
+                <Button>Log In</Button>
+            </a>    
     )
 }
