@@ -5,4 +5,9 @@
     padding: 2.5rem;
     background-color: black;
     color: #fff;
+
+    &__authPanel {
+        display: flex;
+        gap: 2px;
+    }
 }

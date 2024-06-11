@@ -18,7 +18,7 @@ function UserManagement({user}: {user?: UserProfile}) {
     return (
         user 
             ?
-            <div>
+            <div className={styles.header__authPanel}>
                 <p>Hi {user.name}</p>
                 <a href="/api/auth/logout">Logout</a>
             </div>
