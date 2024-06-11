@@ -8,6 +8,11 @@
 
     &__authPanel {
         display: flex;
-        gap: 2px;
+        gap: 12px;
+
+        > p {
+            display: flex;
+            align-items: center;
+        }
     }
 }
