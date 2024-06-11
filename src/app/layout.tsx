@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { UserProvider } from '@auth0/nextjs-auth0/client';
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 import "./globals.css";
-import '@radix-ui/themes/styles.css';
+import "@radix-ui/themes/styles.css";
 
 import Header from "@/components/Header/Header";
 import { Theme } from "@radix-ui/themes";
@@ -22,16 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-          <UserProvider>
-          <body className={inter.className}>
-            <Theme accentColor="indigo">
-              <Header />
-              <div className="body">
-                {children}
-              </div>
-            </Theme>
-            </body>
-        </UserProvider>
+      <UserProvider>
+        <body className={inter.className}>
+          <Theme accentColor="indigo">
+            <Header />
+            <div className="body">{children}</div>
+          </Theme>
+        </body>
+      </UserProvider>
     </html>
   );
 }
